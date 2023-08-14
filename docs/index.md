@@ -82,4 +82,3 @@ A Modern Python Package Template.
   - Because we have already installed the pre-commit by `rye` and have the `.pre-commit-config.yaml` file in our repo,
     so what we ONLY need to do is run `pre-commit install` to install the hooks
 - Run `pre-commit run -a` to check all the files in the project
-

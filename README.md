@@ -81,5 +81,5 @@ A Modern Python Package Template.
 - Fellow the `Quick start` in [https://pre-commit.com/](https://pre-commit.com/)
   - Because we have already installed the pre-commit by `rye` and have the `.pre-commit-config.yaml` file in our repo,
     so what we ONLY need to do is run `pre-commit install` to install the hooks
+- Run `rye shell` into the created python venv environment
 - Run `pre-commit run -a` to check all the files in the project
-
