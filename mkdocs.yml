@@ -1,4 +1,4 @@
-site_name: PPT
+site_name: MPPT
 repo_url: https://github.com/shenxiangzhuang/python-package-template
 repo_name: shenxiangzhuang/python-package-template
 edit_uri: ""
@@ -9,8 +9,6 @@ copyright: Copyright &copy; 2023 Xiangzhuang Shen
 # Page tree
 nav:
   - Home: index.md
-  - Getting started:
-      - Quick Start: quickstart.md
   - Changelog: CHANGELOG.md
 
 theme:
@@ -91,5 +89,5 @@ plugins:
   - search
   - bibtex:
       bib_file: "docs/references.bib"
-      csl_file: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
+      csl_file: "docs/ieee.csl"
       cite_inline: false

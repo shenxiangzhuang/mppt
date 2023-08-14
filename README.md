@@ -8,11 +8,11 @@
 
 <div align="center">
 
-[//]: # (  <a href="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/test.yaml" target="_blank">)
+  <a href="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/test.yaml" target="_blank">
 
-[//]: # (  <img alt="Test" src="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/test.yaml/badge.svg?event=pull_request">)
+  <img alt="Test" src="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/test.yaml/badge.svg">
 
-[//]: # (  </a>)
+  </a>
 
 
   <a href="https://github.com/shenxiangzhuang/python-package-template">
@@ -29,18 +29,14 @@
   </a>
 
 
-[//]: # (  <a href="https://pypi.org/project/mppt" target="_blank">)
+  <a href="https://pypi.org/project/mppt" target="_blank">
 
-[//]: # ()
-[//]: # (  <img src="https://badge.fury.io/py/mppt" alt="PyPI Package">)
+  <img src="https://badge.fury.io/py/mppt.svg" alt="PyPI Package">
 
-[//]: # ()
-[//]: # (  </a>)
+  </a>
 
   <a href="https://codecov.io/gh/shenxiangzhuang/python-package-template" target="_blank">
-
-  <img src="https://codecov.io/gh/shenxiangzhuang/python-package-template/branch/master/graph/badge.svg" alt="Coverage">
-
+    <img src="https://codecov.io/gh/shenxiangzhuang/python-package-template/branch/master/graph/badge.svg" alt="Coverage">
   </a>
 
 
