@@ -1,6 +1,6 @@
 [project]
 name = "mppt"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python Package Template"
 authors = [
     { name = "Xiangzhuang Shen", email = "datahonor@gmail.com" }
