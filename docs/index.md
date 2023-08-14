@@ -45,7 +45,7 @@
 [//]: # (</div>)
 
 # About
-Python package template. 
+Python package template.
 Supported by Rye, Mkdocs, ...
 
 # Installation
@@ -55,4 +55,3 @@ Get latest version from PyPI:
 ```shell
 pip install xxx
 ```
-
