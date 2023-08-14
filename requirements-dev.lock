@@ -89,4 +89,5 @@ watchdog==3.0.0
 wcwidth==0.2.6
 zipp==3.16.2
 # The following packages are considered to be unsafe in a requirements file:
+pip==23.2.1
 setuptools==67.8.0
