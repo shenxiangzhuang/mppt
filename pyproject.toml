@@ -1,5 +1,5 @@
 [project]
-name = "ppt_package"
+name = "mppt"
 version = "0.1.0"
 description = "Python Package Template"
 authors = [
