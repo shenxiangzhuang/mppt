@@ -24,8 +24,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install Rye
-        uses: sksat/setup-rye@v0.1.0
+      - name: Install the latest version of rye
+        uses: eifinger/setup-rye@v1
 
       - name: Load cached venv
         id: cached-rye-dependencies
