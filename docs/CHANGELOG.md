@@ -8,4 +8,3 @@
 
 ### Added
 - add this package template
-
