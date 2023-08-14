@@ -1,0 +1,42 @@
+[project]
+name = "ppt_package"
+version = "0.1.0"
+description = "Python Package Template"
+authors = [
+    { name = "Xiangzhuang Shen", email = "datahonor@gmail.com" }
+]
+dependencies = [
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "setuptools~=67.8.0",
+    "ipython>=8.12.2",
+    "mkdocs-material~=9.1.16",
+    "mkdocs-material-extensions~=1.1.1",
+    "mkdocstrings~=0.22.0",
+    "mkdocs~=1.4.3",
+    "mkdocs-bibtex~=2.9.0",
+    "pre-commit~=3.3.3",
+    "isort~=5.12.0",
+    "flake8~=5.0.4",
+    "black~=23.3.0",
+    "mypy~=1.4.0",
+    "pandas-stubs~=2.0.2.230605",
+    "pytest~=7.3.2",
+    "hypothesis~=6.79.1",
+    "pytest-cov>=4.1.0",
+]
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[[tool.rye.sources]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"

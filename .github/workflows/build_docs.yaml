@@ -1,0 +1,29 @@
+name: Build Docs
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/2.18/pandoc-2.18-1-amd64.deb && sudo dpkg -i pandoc-2.18-1-amd64.deb
+          sudo apt-get install pandoc-citeproc
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin jinja2 mkdocs-bibtex
+
+      - name: Build docs
+        run: mkdocs gh-deploy --force

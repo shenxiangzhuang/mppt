@@ -1,0 +1,51 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test:
+    name: Test and generate coverage
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Rye
+        uses: sksat/setup-rye@v0.1.0
+
+      - name: Load cached venv
+        id: cached-rye-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/requirements.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-rye-dependencies.outputs.cache-hit != 'true'
+        run: rye sync
+
+      - name: Run tests and generate coverage report
+        run: rye run pytest -v --cov=pysesd --cov-fail-under 60 --cov-report=term --cov-report=xml --cov-report=html
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        if: success() && matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          fail_ci_if_error: true
+          verbose: true
