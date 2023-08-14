@@ -4,8 +4,8 @@
 ## [Unreleased]
 
 
-## [0.1.0] - 2023-08-14
+## [0.1.0] - 2023-08-15
 
 ### Added
-- add this template
--
+- add this package template
+
