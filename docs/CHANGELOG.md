@@ -3,6 +3,9 @@
 
 ## [Unreleased]
 
+### Removed
+- Sweep AI App
+
 ## [0.1.1] - 2023-08-15
 
 ### Changed
