@@ -13,6 +13,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Python
         uses: actions/setup-python@v4
+      - name: Setup pandoc
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/2.18/pandoc-2.18-1-amd64.deb && sudo dpkg -i pandoc-2.18-1-amd64.deb
+          sudo apt-get install pandoc-citeproc
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
       - name: Setup a local virtual environment (if no poetry.toml file)
