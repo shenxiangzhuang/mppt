@@ -9,7 +9,20 @@ copyright: Copyright &copy; 2023 Xiangzhuang Shen
 # Page tree
 nav:
   - Home: index.md
-  - Changelog: CHANGELOG.md
+  - Package Management:
+      - package/index.md
+      - Comparison of Python package managers: package/compare.md
+  - Documentation:
+      - doc/index.md
+  - Linter:
+      - linter/index.md
+  - Testing:
+      - test/index.md
+  - Task Runner:
+      - task/index.md
+  - Miscellaneous:
+      - miscellaneous/index.md
+  - Changelog: changelog.md
 
 theme:
   name: material

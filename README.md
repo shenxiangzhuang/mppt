@@ -6,44 +6,27 @@
 </em>
 </p>
 
-<div align="center">
-
-  <a href="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/test.yaml" target="_blank">
-
-  <img alt="Test" src="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/test.yaml/badge.svg">
-
-  </a>
+<center>
 
 
-  <a href="https://github.com/shenxiangzhuang/python-package-template">
-
-  <img alt="Documentation" src="https://github.com/shenxiangzhuang/python-package-template/actions/workflows/build_docs.yaml/badge.svg"/>
-
-  </a>
-
-
-  <a href="#">
-
-  <img src="https://img.shields.io/badge/Python-3.8, 3.9, 3.10, 3.11-blue">
-
-  </a>
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
 
-  <a href="https://pypi.org/project/mppt" target="_blank">
+[![Build Docs](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml)
+![Test](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml/badge.svg)
+![Codecov](https://codecov.io/gh/shenxiangzhuang/mppt/branch/master/graph/badge.svg)
 
-  <img src="https://badge.fury.io/py/mppt.svg" alt="PyPI Package">
+[![Python](https://img.shields.io/badge/Python-3.8,%203.9,%203.10,%203.11-blue)]()
+[![PyPI](https://img.shields.io/pypi/v/mppt)](https://pypi.org/project/mppt/)
+![GitHub License](https://img.shields.io/github/license/shenxiangzhuang/mppt)
 
-  </a>
-
-  <a href="https://codecov.io/gh/shenxiangzhuang/python-package-template" target="_blank">
-    <img src="https://codecov.io/gh/shenxiangzhuang/python-package-template/branch/master/graph/badge.svg" alt="Coverage">
-  </a>
-
-
-</div>
+</center>
 
 # About
-A Modern Python Package Template.
+[MPPT](https://github.com/shenxiangzhuang/mppt): A **M**odern **P**ython **P**ackage **T**emplate.
 
 # Features
 - Package Management: Poetry
@@ -51,49 +34,55 @@ A Modern Python Package Template.
 - Linters: Black, Isort, Flake8, Mypy, Pre-commit
 - Testing: Pytest, Hypothesis, Codecov
 - Task runner: Makefile, Duty, Taskfile
-
+- Miscellaneous: Changelog, License, Semantic Versioning, Contributing
 
 ## Package Management
+> [!NOTE]
+> Doc: [https://datahonor.com/mppt/package](https://datahonor.com/mppt/package)
+
 - Poetry
 
-- Needed in package publishing: Set the pypi token `PYPI_API_TOKEN`
-  - Login your pypi account: [https://pypi.org/manage/account/](https://pypi.org/manage/account/)
-  - In pypi account `Acount Setting` -> `API tokens`: Select `Add API token` to generate the api token and **COPY** it!
-  - In the GitHub repository: `Setting` -> `Environments`: Select `New environments` and create an environment named `publish`
-  - In the `publish` environment add a secrets named with `PYPI_API_TOKEN` and set the value with the token
 
 ## Documentation
+> [!NOTE]
+> Doc: [https://datahonor.com/mppt/doc](https://datahonor.com/mppt/doc)
+
 - Mkdocs with Material theme
 
-- Needed in building documentation site: Set the github action can write the repo
-  - In the repository: `Setting` -> `Actions` -> `Workflow permissions`: Select `Read and write permissions`
-
 ## Linters
+> [!NOTE]
+> Doc: [https://datahonor.com/mppt/linter](https://datahonor.com/mppt/linter)
+
 - Black
 - Isort
 - Flake8
 - Mypy
+- SonarLint
 - Pre-commit
-
-- Fellow the `Quick start` in [https://pre-commit.com/](https://pre-commit.com/)
-  - Because we have already installed the pre-commit by `rye` and have the `.pre-commit-config.yaml` file in our repo,
-    so what we ONLY need to do is run `pre-commit install` to install the hooks
-  - Run `rye shell` into the created python venv environment
-  - Run `pre-commit run -a` to check all the files in the project
 
 
 ## Testing
+> [!NOTE]
+> Doc: [https://datahonor.com/mppt/test](https://datahonor.com/mppt/test)
+
 - Pytest: pytest, pytest-cov, pytest-sugar
 - Hypothesis
 - Codecov
 
-
-- Needed in test coverage report generation: Set the codecov token `CODECOV_TOKEN`
-  - Login your codecov account with GitHub: [https://about.codecov.io/](https://about.codecov.io/)
-  - In codecov account, select the repository and you'll see a page named `Let's get your repo covered`. Just **COPY** the token here.
-  - In the GitHub repository: `Setting` -> `Secrets and variables`: Add a `Repository secrets` named `CODECOV_TOKEN` and set the value with the token
-
 ## Task runner
+> [!NOTE]
+> Doc: [https://datahonor.com/mppt/task](https://datahonor.com/mppt/task)
+
 - Makefile
 - Duty
 - Taskfile
+
+## Miscellaneous
+> [!NOTE]
+> Doc: [https://datahonor.com/mppt/miscellaneous](https://datahonor.com/mppt/miscellaneous)
+
+- Change Log: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+- Versioning: [Semantic Versioning](https://semver.org/)
+- License: [Choose an open source license](https://choosealicense.com/)
+- Badge: [Shields.io](https://shields.io/)
+- Contributing: [Contributing to Open Source on GitHub](https://guides.github.com/activities/contributing-to-open-source/)
