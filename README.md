@@ -33,8 +33,7 @@
 - Miscellaneous: Changelog, License, Semantic Versioning, Contributing
 
 ## Package Management
-> [!NOTE]
-> Doc: [https://datahonor.com/mppt/package](https://datahonor.com/mppt/package)
+> [!NOTE] Doc: [https://datahonor.com/mppt/package](https://datahonor.com/mppt/package)
 
 - Poetry
 
