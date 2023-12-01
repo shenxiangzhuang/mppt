@@ -3,6 +3,12 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-12-01
+
+### Added
+- Documentations for all the features (#20)
+- Quick sort implementation for hypothesis testing (#22)
+
 ### Changed
 - Change package management from Rye to Poetry (#15, #19)
 

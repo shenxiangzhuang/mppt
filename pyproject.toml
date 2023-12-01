@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mppt"
-version = "0.1.1"
+version = "0.2.0"
 description = "Python Package Template"
 authors = ["Xiangzhuang Shen <datahonor@gmail.com>"]
 license = "MIT"
