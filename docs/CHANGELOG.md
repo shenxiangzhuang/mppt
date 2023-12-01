@@ -4,7 +4,7 @@
 ## [Unreleased]
 
 ### Changed
-- Change package management from Rye to Poetry
+- Change package management from Rye to Poetry (#15, #19)
 
 ### Removed
 - Sweep AI App
