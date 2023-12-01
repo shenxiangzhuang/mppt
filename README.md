@@ -24,6 +24,10 @@
 # About
 [MPPT](https://github.com/shenxiangzhuang/mppt): A **M**odern **P**ython **P**ackage **T**emplate.
 
+# Documentation
+
+[https://datahonor.com/mppt/](https://datahonor.com/mppt/)
+
 # Features
 - Package Management: Poetry
 - Documentation: Mkdocs with Material theme
@@ -32,21 +36,17 @@
 - Task runner: Makefile, Duty, Taskfile
 - Miscellaneous: Changelog, License, Semantic Versioning, Contributing
 
-## Package Management
-> [!NOTE] Doc: [https://datahonor.com/mppt/package](https://datahonor.com/mppt/package)
+> [!NOTE]
+> You can get more details about the features in the [documentation](https://datahonor.com/mppt/).
 
+## Package Management
 - Poetry
 
-
 ## Documentation
-> [!NOTE]
-> Doc: [https://datahonor.com/mppt/doc](https://datahonor.com/mppt/doc)
 
 - Mkdocs with Material theme
 
 ## Linters
-> [!NOTE]
-> Doc: [https://datahonor.com/mppt/linter](https://datahonor.com/mppt/linter)
 
 - Black
 - Isort
@@ -57,24 +57,18 @@
 
 
 ## Testing
-> [!NOTE]
-> Doc: [https://datahonor.com/mppt/test](https://datahonor.com/mppt/test)
 
 - Pytest: pytest, pytest-cov, pytest-sugar
 - Hypothesis
 - Codecov
 
 ## Task runner
-> [!NOTE]
-> Doc: [https://datahonor.com/mppt/task](https://datahonor.com/mppt/task)
 
 - Makefile
 - Duty
 - Taskfile
 
 ## Miscellaneous
-> [!NOTE]
-> Doc: [https://datahonor.com/mppt/miscellaneous](https://datahonor.com/mppt/miscellaneous)
 
 - Change Log: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - Versioning: [Semantic Versioning](https://semver.org/)
