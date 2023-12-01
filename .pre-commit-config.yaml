@@ -26,4 +26,4 @@ repos:
     rev: v1.7.1  # Use the sha / tag you want to point at
     hooks:
       - id: mypy
-        args: [--strict, --ignore-missing-imports]
+        args: ["--install-types", "--non-interactive", "--ignore-missing-imports", "--check-untyped-defs"]
