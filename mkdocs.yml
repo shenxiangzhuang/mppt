@@ -19,13 +19,17 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: teal
+      accent: deep purple
       toggle:
-        icon: material/lightbulb-outline
+        icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: cyan
+      accent: deep purple
       toggle:
-        icon: material/lightbulb
+        icon: material/weather-night
         name: Switch to light mode
   features:
     # - announce.dismiss
@@ -78,7 +82,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.details
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      url_download: true
   - pymdownx.tabbed
   - abbr
   - admonition
