@@ -97,5 +97,3 @@ A Modern Python Package Template.
 - Makefile
 - Duty
 - Taskfile
-
-
