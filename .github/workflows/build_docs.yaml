@@ -10,20 +10,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-
-      - name: Install dependencies
+      - uses: actions/checkout@v3
+      - name: Install Python
+        uses: actions/setup-python@v4
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Setup a local virtual environment (if no poetry.toml file)
         run: |
-          wget https://github.com/jgm/pandoc/releases/download/2.18/pandoc-2.18-1-amd64.deb && sudo dpkg -i pandoc-2.18-1-amd64.deb
-          sudo apt-get install pandoc-citeproc
-          python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin jinja2 mkdocs-bibtex
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
+      - uses: actions/cache@v3
+        name: Define a cache for the virtual environment based on the dependencies lock file
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+      - name: Install the project dependencies
+        run: poetry install
 
       - name: Build docs
-        run: mkdocs gh-deploy --force
+        run: poetry run mkdocs gh-deploy --force
