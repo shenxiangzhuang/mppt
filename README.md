@@ -1,8 +1,10 @@
-<center>
-
-# [MPPT](https://github.com/shenxiangzhuang/mppt)
-
-</center>
+<p align="center" style="font-size:80px; margin:0px 10px 0px 10px">
+    <em>MPPT</em>
+</p>
+<p align="center", style="font-size: 40px">
+    <em>A Modern Python Package Template
+</em>
+</p>
 
 <center>
 
