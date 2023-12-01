@@ -7,39 +7,36 @@ on:
   pull_request:
 
 jobs:
-  test:
-    name: Test and generate coverage
-    runs-on: ${{ matrix.os }}
+  ci:
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-latest]
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
-
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
+        poetry-version: ["1.0", "1.1.15"]
+        os: [ubuntu-18.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Python ${{ matrix.python-version }}
+      - uses: actions/checkout@v3
+      - name: Install Python
         uses: actions/setup-python@v4
+        # see details (matrix, python-version, python-version-file, etc.)
+        # https://github.com/actions/setup-python
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Setup a local virtual environment (if no poetry.toml file)
+        run: |
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
+      - uses: actions/cache@v3
+        name: Define a cache for the virtual environment based on the dependencies lock file
         with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Install the latest version of rye
-        uses: eifinger/setup-rye@v1
-
-      - name: Load cached venv
-        id: cached-rye-dependencies
-        uses: actions/cache@v2
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/requirements.lock') }}
-
-      - name: Install dependencies
-        if: steps.cached-rye-dependencies.outputs.cache-hit != 'true'
-        run: rye sync
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+      - name: Install the project dependencies
+        run: poetry install
 
       - name: Run tests and generate coverage report
-        run: rye run pytest -v --cov=src --cov-fail-under 0 --cov-report=term --cov-report=xml --cov-report=html
+        run: poetry run pytest -v --cov=src --cov-fail-under 0 --cov-report=term --cov-report=xml --cov-report=html
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
