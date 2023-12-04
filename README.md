@@ -36,8 +36,6 @@
 - Task runner: Makefile, Duty, Taskfile
 - Miscellaneous: Changelog, License, Semantic Versioning, Contributing
 
-> [!NOTE]
-> You can get more details about the features in the [documentation](https://datahonor.com/mppt/).
 
 ## Package Management
 - Poetry
