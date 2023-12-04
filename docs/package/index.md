@@ -17,7 +17,7 @@ which can save us time and let us only focus on business logic.
       challenging problems in software engineering**.
 
       - The trick isn't just finding
-        a way to manage one dependency—the trick is how to manage **a network of 
+        a way to manage one dependency—the trick is how to manage **a network of
         dependencies and their changes over time**.
 
 
@@ -55,7 +55,7 @@ changes, no behavioral changes, nothing.
 
 !!! warning "`requirements.txt` with `==`"
 
-    If you use `==`(or don't have a version specification at all) in `requirements.txt`, 
+    If you use `==`(or don't have a version specification at all) in `requirements.txt`,
     you are actrully using the Static Dependency Model.
 
 #### Semantic Versioning
@@ -74,8 +74,8 @@ API-incompatible changes (major version changes).
 
 ??? note "Two another methods in the SRE book"
 
-    The are two another dependencies management methods in the book, 
-    named with "Bundled Distribution Models" and "Live at Head". 
+    The are two another dependencies management methods in the book,
+    named with "Bundled Distribution Models" and "Live at Head".
     They have little relation to the topic here, so we wouldn't expand them here.
 
 
