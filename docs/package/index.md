@@ -82,7 +82,6 @@ API-incompatible changes (major version changes).
     named with "Bundled Distribution Models" and "Live at Head".
     They have little relation to the topic here, so we wouldn't expand them here.
 
->>>>>>> master
 
 ## Poetry(Recommended)
 
