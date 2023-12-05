@@ -1,5 +1,10 @@
 # Package Management
 
+<center>
+![](https://imgs.xkcd.com/comics/python_environment.png)
+</center>
+
+
 ## Poetry(Recommended)
 
 [Poetry](https://python-poetry.org/) is a tool for dependency management and packaging in Python.
