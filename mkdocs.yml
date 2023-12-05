@@ -97,7 +97,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.snippets:
       url_download: true
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - abbr
   - admonition
   - attr_list

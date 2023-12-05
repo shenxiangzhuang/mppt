@@ -1,5 +1,9 @@
 # Package Management
 
+<center>
+![](https://imgs.xkcd.com/comics/python_environment.png)
+</center>
+
 ## Why, What and How
 Most of the illustration is excerpted from *Software Engineering from Google*[@google-sre].
 
