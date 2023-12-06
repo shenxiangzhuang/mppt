@@ -1,8 +1,8 @@
 site_name: MPPT
-repo_url: https://github.com/shenxiangzhuang/python-package-template
-repo_name: shenxiangzhuang/python-package-template
+repo_url: https://github.com/shenxiangzhuang/mppt
+repo_name: shenxiangzhuang/mppt
 edit_uri: ""
-site_description: Python Package Template.
+site_description: A Modern Python Package Template
 site_author: Xiangzhuang Shen
 copyright: Copyright &copy; 2023 Xiangzhuang Shen
 
