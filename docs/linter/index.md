@@ -8,16 +8,14 @@ which are extracted from the official docs.
 ## Black, MyPy, Isort, Flake8(Recommended)
 Now in used linters and formatters are `Black`, `MyPy`, `Isort`, `Flake8`, which are managed by `pre-commit` together.
 
-!!! note "Ruff V.S. Isort & Flake8"
-
-    Until now, I don't use `Ruff` in the project,
-    but I think it is a good tool to replace `Isort` and `Flake8`.
-    In the future version, I will try to use `Ruff` to replace `Isort` and `Flake8`.
-
 ## Black, MyPy and Ruff(Recommended)
 
 After some reading[^1] and communication[^3], I think using `Black`, `MyPy` and `Ruff` maybe a better choice.
 I'll try to explore Ruff later and try to use it in the project.
+
+!!! note "Ruff is now in the template as extra linter and formatter"
+
+    Later, we may use `Ruff` to replace `Isort` and `Flake8` in the project.
 
 
 ## Swiss Army Knife :-)
@@ -168,10 +166,6 @@ All done! ✨ 🍰 ✨
 
 ### [Ruff](https://github.com/astral-sh/ruff): Linter & Formatter
 
-!!! note "Ruff is NOT in the template until now"
-
-    Actually, I don't use `Ruff` in practice.
-    I'll try to explore Ruff later and try to use it in the project.
 
 As just mentioned before, many people recommend to use `Ruff`, because it's a very cool tool.
 
