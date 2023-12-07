@@ -4,7 +4,7 @@
 ## [Unreleased]
 
 ### Added
-- Add ruff as extra linter and formatter: both in dependency and pre-commit
+- Add ruff as extra linter and formatter: both in dependency and pre-commit (#31)
 - Add more details about the linters and formatters with the resource from Google SRE book
 
 ## [0.2.0] - 2023-12-01
