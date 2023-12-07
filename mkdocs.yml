@@ -14,7 +14,7 @@ nav:
       - Comparison of Python package managers: package/compare.md
   - Documentation:
       - doc/index.md
-  - Linter:
+  - Linters&Formatters:
       - linter/index.md
   - Testing:
       - test/index.md
