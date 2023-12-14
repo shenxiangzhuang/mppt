@@ -5,12 +5,49 @@
 [Pytest](https://docs.pytest.org/en/stable/) is a testing framework for Python.
 It is a mature full-featured Python testing tool.
 
+## Doctest
+Python supports [doctest](https://docs.python.org/3/library/doctest.html),
+which is very convenient for testing small code snippets within docstrings.
+And, it's make the usage of the code more clear.
+
+```python
+def add(a, b):
+    """
+    >>> add(1, 2)
+    3
+    >>> add(2, 3)
+    5
+    """
+    return a + b
+```
+
+!!! tip "Run doctest"
+
+    === "Run doctest for a specific module"
+
+        ```bash
+        python -m doctest -v mppt/hello.py
+        ```
+
+    === "Run doctest for all the modules"
+
+        ```bash
+        python -m doctest -v mppt/*.py
+        ```
+
+    === "Run with pytest"
+
+        ```bash
+        pytest --doctest-modules
+        ```
+
 
 ## Hypothesis
 [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) is a library for **property based testing**.
 
 
-### Testing Statistics
+We can print the statistics of the hypothesis testing by adding the following command line option:
+
 RUN: `pytest --hypothesis-show-statistics tests/test_sort.py`
 
 ??? "Testing statistics"

@@ -37,7 +37,7 @@ jobs:
         run: poetry install
 
       - name: Run tests and generate coverage report
-        run: poetry run pytest -v --cov=mppt --cov-fail-under 90 --cov-report=term --cov-report=xml --cov-report=html
+        run: poetry run pytest --doctest-modules -v --cov=mppt --cov-fail-under 90 --cov-report=term --cov-report=xml --cov-report=html
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
