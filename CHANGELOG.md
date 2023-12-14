@@ -3,9 +3,12 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2023-12-14
+
 ### Added
 - Add ruff as extra linter and formatter: both in dependency and pre-commit (#31)
 - Add more details about the linters and formatters with the resource from Google SRE book
+- Add doctest (#34)
 
 ## [0.2.0] - 2023-12-01
 
