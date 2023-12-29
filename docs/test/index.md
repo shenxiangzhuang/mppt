@@ -94,6 +94,11 @@ RUN: `pytest --hypothesis-show-statistics tests/test_sort.py`
     ```
 
 
+## Locust
+
+[Locust](https://locust.io/) is an easy-to-use, distributed, user load testing(stress testing) tool.
+
+
 ## Codecov
 
 [Codecov](https://about.codecov.io/) is a code coverage tool.
