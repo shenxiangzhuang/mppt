@@ -3,6 +3,9 @@
 
 ## [Unreleased]
 
+### Added
+- Add Locust as a load testing tool (#39)
+
 ## [0.3.0] - 2023-12-14
 
 ### Added
