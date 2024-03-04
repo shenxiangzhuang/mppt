@@ -95,3 +95,12 @@ $ python main.py --help
 
 // You have 2 subcommands (the 2 functions): goodbye and hello
 ```
+
+## Just
+
+!!! note "Just"
+
+    [casey/just](https://github.com/casey/just) is a handy way to save and run project-specific commands.
+
+
+![](https://raw.githubusercontent.com/casey/just/master/screenshot.png)
