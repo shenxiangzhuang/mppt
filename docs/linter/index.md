@@ -286,7 +286,6 @@ Pre-commit can be treated as a linter manager, it can manage the linters in the 
 ### SonarLint
 [SonarLint](https://www.sonarsource.com/products/sonarlint/)
 
-
 ### SQLFluff
 
 [SQLFluff](https://sqlfluff.com/) is a linter for SQL code.
