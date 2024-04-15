@@ -7,6 +7,7 @@
 - Add Locust as a load testing tool (#39)
 - Add package management tool uv (#49)
 - Add task runner just (#50)
+- Add sql linter: SQLFluff (#58)
 
 ## [0.3.0] - 2023-12-14
 
