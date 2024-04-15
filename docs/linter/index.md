@@ -295,7 +295,6 @@ Pre-commit can be treated as a linter manager, it can manage the linters in the 
     SQLFluff is an open source, dialect-flexible and configurable SQL linter. Designed with ELT applications in mind, SQLFluff also works with Jinja templating and dbt. SQLFluff will auto-fix most linting errors, allowing you to focus your time on what matters.
     - SQLFluff doc
 
-
 [//]: # (footnotes:)
 [^1]: [PyCon US 2023 - An Overview of the Python Code Tool Landscape 2023](https://docs.google.com/presentation/d/1kHK5M4GpB_qSQO3aGbVzUtWaSwqsEaMqikuIeM4VDjk/edit?pli=1#slide=id.g22f3767756a_0_60)
 [^2]: [Python Linter Comparison 2022](https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/)
