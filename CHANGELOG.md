@@ -4,7 +4,8 @@
 ## [Unreleased]
 
 ### Added
-- **Poetry-files**: Add commitizen, a conventional commit tool (#71)
+- Poetry: Add commitizen, a conventional commit tool (#71)
+- Add `py.typed` file to support type hinting (#70)
 - Add sql linter: SQLFluff (#58)
 - Add task runner just (#50)
 - Add package management tool uv (#49)
