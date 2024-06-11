@@ -1,11 +1,14 @@
 # Changelog
 
 
-## Unreleased
+## [Unreleased]
 
-### Feat
-
-- **Poetry-files**: Add commitizen, a conventional commit tool
+### Added
+- **Poetry-files**: Add commitizen, a conventional commit tool (#71)
+- Add sql linter: SQLFluff (#58)
+- Add task runner just (#50)
+- Add package management tool uv (#49)
+- Add Locust as a load testing tool (#39)
 
 ## [0.3.0] - 2023-12-14
 
