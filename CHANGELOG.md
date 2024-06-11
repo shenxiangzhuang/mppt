@@ -3,6 +3,8 @@
 
 ## [Unreleased]
 
+## [0.4.0] - 2024-06-11
+
 ### Added
 - Poetry: Add commitizen, a conventional commit tool (#71)
 - Add `py.typed` file to support type hinting (#70)
