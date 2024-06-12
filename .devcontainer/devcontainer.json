@@ -18,7 +18,12 @@
 			"extensions": [
 				"streetsidesoftware.code-spell-checker"
 			]
-		}
+		},
+		"codespaces": {
+			"openFiles": [
+			  "README.md",
+			]
+		  }
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
