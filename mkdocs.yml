@@ -1,7 +1,6 @@
 site_name: MPPT
 repo_url: https://github.com/shenxiangzhuang/mppt
 repo_name: shenxiangzhuang/mppt
-edit_uri: ""
 site_description: A Modern Python Package Template
 site_author: Xiangzhuang Shen
 copyright: Copyright &copy; 2023 Xiangzhuang Shen
@@ -47,26 +46,25 @@ theme:
   features:
     - content.action.edit
     - content.action.view
-    - content.code.copy
-    # - announce.dismiss
+    - announce.dismiss
     - content.code.annotate
-    # - content.tabs.link
+    - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    # - navigation.expand
-    - navigation.indexes
-    # - navigation.instant
-    # - navigation.prune
-    - navigation.sections
-    - navigation.tabs
-    # - navigation.tabs.sticky
-    - navigation.top
+    - header.autohide
+    - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.prune
+    - navigation.sections
+    - navigation.top
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
     # - toc.integrate
+    - content.code.annotate
 
 docs_dir: docs
 
