@@ -21,6 +21,7 @@ nav:
   - Miscellaneous:
       - miscellaneous/index.md
   - Changelog: changelog.md
+  - Author's website: https://shenxiangzhuang.github.io/
 
 theme:
   name: material
