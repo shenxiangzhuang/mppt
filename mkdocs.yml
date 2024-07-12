@@ -10,7 +10,6 @@ nav:
   - Home: index.md
   - Package Management:
       - package/index.md
-      - Comparison of Python package managers: package/compare.md
   - Documentation:
       - doc/index.md
   - Linters&Formatters:
