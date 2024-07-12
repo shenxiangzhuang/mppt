@@ -30,23 +30,17 @@
 [https://datahonor.com/mppt/](https://datahonor.com/mppt/)
 
 # Features
-- Package Management: Poetry
-- Documentation: Mkdocs with Material theme
-- Linters&Formatters: Black, Isort, Flake8, Ruff, Mypy, Pre-commit, SonarLint
-- Testing: Pytest, Hypothesis, Codecov
-- Task runner: Makefile, Duty, Taskfile
-- Miscellaneous: Changelog, License, Semantic Versioning, Contributing
-
 
 ## Package Management
 - Poetry
+- Alternative: Uv, PDM, Rye
 
 ## Documentation
-
 - Mkdocs with Material theme
+- Alternative: Sphinx
 
 ## Linters
-
+- Ruff
 - Black
 - Isort
 - Flake8
@@ -56,21 +50,26 @@
 
 
 ## Testing
-
+- Doctest
 - Pytest: pytest, pytest-cov, pytest-sugar
 - Hypothesis
+- Locust
 - Codecov
 
 ## Task runner
-
 - Makefile
-- Duty
 - Taskfile
+- Duty
+- Typer
+- Just
+
+
 
 ## Miscellaneous
-
+- Commits: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - Change Log: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - Versioning: [Semantic Versioning](https://semver.org/)
 - License: [Choose an open source license](https://choosealicense.com/)
 - Badge: [Shields.io](https://shields.io/)
 - Contributing: [Contributing to Open Source on GitHub](https://guides.github.com/activities/contributing-to-open-source/)
+- AI Reviewer: [CodeRabbit](https://coderabbit.ai/)
