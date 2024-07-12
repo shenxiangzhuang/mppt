@@ -127,6 +127,12 @@ Some configuration is needed in package publishing
 
 ## Alternatives
 
+???+ tip "Comparison of Python package managers"
+
+    - [Python has too many package managers](https://dublog.net/blog/so-many-python-package-managers/)
+
+
+
 ### uv(Recommended)
 [uv](https://github.com/astral-sh/uv) is a VERY fast Python package installer and resolver.
 It speeds up the dependency resolution & installation process a lot.
