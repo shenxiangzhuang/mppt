@@ -289,6 +289,25 @@ theme:
 
 <!-- end_slide -->
 
+Private PyPI
+===
+[](https://confluence.leihuo.netease.com/pages/viewpage.action?pageId=294128286)
+
+## Upload
+
+```bash
+poetry publish --build [--dry-run] -r crowdsourcing-pypi-nexus -u user_name -p password
+```
+
+## Install
+
+```bash
+pip install --pre -U "toylib" --timeout 300 -i http://crowdsourcing-read:CrowdsourcingRead@163@apps-hp.danlu.netease.com:41842/repository/crowdsourcing-pypi-group/simple --trusted-host apps-hp.danlu.netease.com
+```
+
+<!-- end_slide -->
+
+
 Some Engineering Practices
 ===
 - Test Coverage
