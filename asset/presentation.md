@@ -357,7 +357,6 @@ Showcase
 Tools used in this presentation
 ===
 - Presenterm: [](https://github.com/mfontanini/presenterm)
-- Wrap: [](https://www.warp.dev/)
 - Zed: [](https://zed.dev/)
 
 <!-- end_slide -->
