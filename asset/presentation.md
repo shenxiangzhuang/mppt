@@ -6,8 +6,9 @@ theme:
   name: dark
   defaults:
     terminal_font_size: 16
-#  override:
-#    footer:
+  override:
+    footer:
+      style: empty
 #      style: template
 #      left: "Mathew Shen"
 #      center: "现代Python应用构建"
