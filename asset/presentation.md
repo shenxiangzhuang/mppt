@@ -335,10 +335,16 @@ Some Engineering Practices
 
 <!-- end_slide -->
 
-Showcase: `crowdlib`
+Showcase
 ===
-- [](https://crowdlib.apps-sl.danlu.netease.com/)
+- `crowdlib`: doc
+  - [](https://crowdlib.apps-sl.danlu.netease.com/)
 
+- `bleuscore`: test(hypothesis)
+  - [](https://github.com/shenxiangzhuang/bleuscore/blob/master/tests/test_bleu_score.py)
+
+- `full-stack-fastapi-template`: application/service structure
+  - [](https://github.com/tiangolo/full-stack-fastapi-template)
 
 <!-- end_slide -->
 
