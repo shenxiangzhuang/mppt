@@ -9,10 +9,6 @@ theme:
   override:
     footer:
       style: empty
-#      style: template
-#      left: "Mathew Shen"
-#      center: "现代Python应用构建"
-#      right: "{current_slide} / {total_slides}"
 ---
 
 What
@@ -23,13 +19,12 @@ What
 
 <!-- end_slide -->
 
-
 Why
 ===
 
 <!-- pause -->
 
-## 技术债务
+## Technical debt
 
 "**Technical debt** is the implied cost of future reworking required when choosing
   an **_easy but limited solution_** instead of a better approach that could take more time." -- Wikipedia
@@ -40,7 +35,6 @@ Why
 
 
 ## Goals
-
 
 - 提高代码质量
 - 降低技术债务积累
@@ -270,7 +264,7 @@ Then? Add linters!
 
 - Add `pre-commit` with `ruff`, `black`, `isort`, `mypy` and so on...
   - Install `pre-commit`: `poetry add -G test pre-commit`
-  - Add `.pre-commit-config.yaml` file(copy from `crowdlib`)
+  - Add `.pre-commit-config.yaml` file(copy from `mppt`)
   - Run `pre-commit install` to install the pre-commit hooks
   - Run `pre-commit run --all-files` to check the code style
 
@@ -297,31 +291,6 @@ theme:
 ```
 - Run `mkdocs serve` to preview the docs
 
-<!-- end_slide -->
-
-Private PyPI
-===
-[](https://confluence.leihuo.netease.com/pages/viewpage.action?pageId=294128286)
-
-## Upload
-
-```bash
-poetry publish
---build
-[--dry-run]
--r crowdsourcing-pypi-nexus
--u user_name -p password
-```
-
-## Install
-
-```bash
-pip install
---pre -U "toylib"
---timeout 300
--i index_url
---trusted-host apps-hp.danlu.netease.com
-```
 
 <!-- end_slide -->
 
@@ -329,7 +298,6 @@ pip install
 Some Engineering Practices
 ===
 - Test Coverage
-  - `crowdlib`: `make test`
 
 - CHANGELOG & Semantic Versioning
   - [](https://keepachangelog.com/en/1.1.0/)
@@ -340,24 +308,17 @@ Some Engineering Practices
 
 - Code Review
   - `Viewed`, `Suggestions`, ...
-  - [](https://gitlab.leihuo.netease.com/crowdsourcing-algorithm-group/algorithms/crowdlib/-/merge_requests/9)
-
 
 <!-- end_slide -->
 
 Showcase
 ===
-- `crowdlib`: doc
-  - [](https://crowdlib.apps-sl.danlu.netease.com/)
-
 - `bleuscore`: test(hypothesis)
   - [](https://github.com/shenxiangzhuang/bleuscore/blob/master/tests/test_bleu_score.py)
 
 - `full-stack-fastapi-template`: application/service structure
   - Template: [](https://github.com/tiangolo/full-stack-fastapi-template)
   - Tools: [](https://datahonor.com/se/backend/python/)
-  - Observability: Sentry: [](https://sentry.fuxi.netease.com/organizations/fuxi/projects/)
-
 
 - `BentoML`: model serving
   - [](https://github.com/bentoml/BentoML)
