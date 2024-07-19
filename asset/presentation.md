@@ -115,7 +115,10 @@ Project Setting: Poetry init project
 
 ### Project setting
 - Add `README.md`
-- Add root package directory: `toylib-repo/toylib`, `toylib-repo/toylib/__init__.py`
+- Setting up the project structure
+  - `toylib-repo/toylib`
+  - `toylib-repo/toylib/__init__.py`
+  - `toylib-repo/toylib/py.typed`(PEP 561)
 
 ### Installation
 - Run `poetry install` to install all dependencies
@@ -345,6 +348,9 @@ Showcase
 
 - `full-stack-fastapi-template`: application/service structure
   - [](https://github.com/tiangolo/full-stack-fastapi-template)
+
+- `BentoML`: model serving
+  - [](https://github.com/bentoml/BentoML)
 
 <!-- end_slide -->
 
