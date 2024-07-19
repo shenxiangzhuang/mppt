@@ -6,6 +6,12 @@ theme:
   name: dark
   defaults:
     terminal_font_size: 16
+#  override:
+#    footer:
+#      style: template
+#      left: "Mathew Shen"
+#      center: "现代Python应用构建"
+#      right: "{current_slide} / {total_slides}"
 ---
 
 What
@@ -347,7 +353,10 @@ Showcase
   - [](https://github.com/shenxiangzhuang/bleuscore/blob/master/tests/test_bleu_score.py)
 
 - `full-stack-fastapi-template`: application/service structure
-  - [](https://github.com/tiangolo/full-stack-fastapi-template)
+  - Template: [](https://github.com/tiangolo/full-stack-fastapi-template)
+  - Tools: [](https://datahonor.com/se/backend/python/)
+  - Observability: Sentry: [](https://sentry.fuxi.netease.com/organizations/fuxi/projects/)
+
 
 - `BentoML`: model serving
   - [](https://github.com/bentoml/BentoML)
