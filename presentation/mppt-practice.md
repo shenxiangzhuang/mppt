@@ -1,6 +1,6 @@
 ---
-title: 现代Python应用构建
-sub_title: MPPT实践篇
+title: Build Modern Python Application
+sub_title: MPPT in Practice
 author: Mathew Shen
 theme:
   name: dark
@@ -29,18 +29,11 @@ Why
 "**Technical debt** is the implied cost of future reworking required when choosing
   an **_easy but limited solution_** instead of a better approach that could take more time." -- Wikipedia
 
-- 与金融债务类似，技术债务如果不偿还，会积累“利息”，使得实现变更变得更加困难。
-- 未偿还的技术债务会增加软件熵和进一步重做的成本。
-- 与金融债务类似，技术债务不一定是坏事，有时（如概念验证（POC））是推动项目前进所必需的。
-
-
 ## Goals
 
-- 提高代码质量
-- 降低技术债务积累
-- 优化开发体验: 通过类型检查，减少`Runtime Error`, ...
-- 提高团队协作效率: Documentation, Code Review, ...
-- 降低维护成本: Test, CI/CD, ...
+- Better code quality
+- Reduce technical debt accumulation
+
 
 <!-- end_slide -->
 
@@ -58,13 +51,9 @@ Environment Setting: Uv & Poetry & Python
 ---
 
 - Install `uv`: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
-  - 这里用`uv`主要是为了利用其cache功能，加速依赖安装
-    - 另外其用来创建虚拟环境的功能也很方便
-    - 最后是因为其**Cargo for Python**的愿景, 未来可能成为Python依赖管理的事实标准！
 - Install `poetry`: [https://python-poetry.org/docs/#installation](https://python-poetry.org/docs/#installation)
 - Install Python3.9 in your system: `brew install python@3.9`(for macOS)
 
-检查安装是否成功:
 ```bash +exec
 uv -V
 poetry -V
@@ -107,7 +96,7 @@ Project Setting: Poetry init project
 ---
 
 ### Project init
-- Run `git init` to create a new git repository(if the project is not under version control)
+- Run `git init` to create a new git repository (if the project is not under version control)
   - Add `.gitignore` file: [Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
 - Run `poetry init` to create a new project
   - fill in the project name, description, author, ...
