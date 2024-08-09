@@ -144,6 +144,12 @@ It speeds up the dependency resolution & installation process a lot.
     But uv is a promising package manager which will be the game changer in the future, IMHO.
     So keep an eye on it and try it if you can!
 
+### pixi
+
+[pixi](https://github.com/prefix-dev/pixi/)
+is a cross-platform, multi-language package manager and workflow tool built on the foundation of the conda ecosystem.
+
+
 ### PDM
 [PDM](https://pdm.fming.dev/) is a modern Python package manager with PEP 582 support.
 
