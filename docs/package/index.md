@@ -83,56 +83,6 @@ API-incompatible changes (major version changes).
     They have little relation to the topic here, so we wouldn't expand them here.
 
 
-## Poetry(Recommended)
-
-[Poetry](https://python-poetry.org/) is a tool for dependency management and packaging in Python.
-It allows you to declare the libraries your project depends on, and it will manage (install/update) them for you.
-
-!!! note "Poetry"
-
-    Poetry is a tool for **dependency management** and **packaging** in Python.
-    It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
-    Poetry offers a **lockfile** to ensure repeatable installs, and can build your project for distribution.
-
-### Publish to pypi
-
-Some configuration is needed in package publishing
-
-!!! tip "Set the pypi token `PYPI_API_TOKEN`"
-
-    - Login your pypi account: [https://pypi.org/manage/account/](https://pypi.org/manage/account/)
-    - In pypi account `Acount Setting` -> `API tokens`: Select `Add API token` to generate the api token and **COPY** it!
-    - In the GitHub repository: `Setting` -> `Environments`: Select `New environments` and create an environment named `publish`
-    - In the `publish` environment add a secrets named with `PYPI_API_TOKEN` and set the value with the token
-
-
-## Why Poetry?
-
-### More popular
-
-- Poetry: 27.6k🌟
-- Rye: 7.6k🌟
-- PDM: 5.6k🌟
-
-!!! note "Date"
-
-    Statistic data collect until 2023-12-01
-
-### Faster
-
-- From the benchmark
-  ([Python Package Manager Shootout](https://lincolnloop.github.io/python-package-manager-shootout/)),
-  we can see that Poetry is (almost)the fastest package manager.
-
-
-## Alternatives
-
-???+ tip "Comparison of Python package managers"
-
-    - [Python has too many package managers](https://dublog.net/blog/so-many-python-package-managers/)
-
-
-
 ### uv(Recommended)
 [uv](https://github.com/astral-sh/uv) is a VERY fast Python package installer and resolver.
 It speeds up the dependency resolution & installation process a lot.
@@ -143,6 +93,35 @@ It speeds up the dependency resolution & installation process a lot.
     So we recommend you to use Poetry for now.
     But uv is a promising package manager which will be the game changer in the future, IMHO.
     So keep an eye on it and try it if you can!
+
+
+
+## Alternatives
+
+???+ tip "Comparison of Python package managers"
+
+    - [Python has too many package managers](https://dublog.net/blog/so-many-python-package-managers/)
+
+
+### Poetry
+
+[Poetry](https://python-poetry.org/) is a tool for dependency management and packaging in Python.
+It allows you to declare the libraries your project depends on, and it will manage (install/update) them for you.
+
+!!! note "Poetry"
+
+    Poetry is a tool for **dependency management** and **packaging** in Python.
+    It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+    Poetry offers a **lockfile** to ensure repeatable installs, and can build your project for distribution.
+
+
+!!! tip "Set the pypi token `PYPI_API_TOKEN`"
+
+    - Login your pypi account: [https://pypi.org/manage/account/](https://pypi.org/manage/account/)
+    - In pypi account `Acount Setting` -> `API tokens`: Select `Add API token` to generate the api token and **COPY** it!
+    - In the GitHub repository: `Setting` -> `Environments`: Select `New environments` and create an environment named `publish`
+    - In the `publish` environment add a secrets named with `PYPI_API_TOKEN` and set the value with the token
+
 
 ### pixi
 
@@ -160,15 +139,13 @@ is a cross-platform, multi-language package manager and workflow tool built on t
     The most significant benefit is it installs and **manages packages in a similar way to npm** that doesn't need to
     create a virtualenv at all!
 
-### Rye
+### Rye(Use Uv instead)
+
 [Rye](https://rye-up.com/): An Experimental Package Management Solution for Python.
 
-!!! note "Rye"
+!!! quote "[uv: Python packaging in Rust](https://astral.sh/blog/uv-unified-python-packaging)"
 
-    Rye is Armin's personal one-stop-shop for all his Python needs.
-    It installs and manages Python installations, helps working with pyproject.toml files,
-    installs and uninstalls dependencies, creates and updates virtualenvs behind the scenes.
-    It supports monorepos and global tool installations.
-
-    Rye is an experimental endeavour to build a new type of packaging experience to Python **inspired by rustup and cargo
-    from Rust**. It's not yet production ready but feedback and suggestions are greatly appreciated.
+    We saw this as a rare opportunity to team up, and to avoid fragmenting the Python ecosystem.
+    As such, in collaboration with Armin, we're excited to be taking over Rye.
+    Our goal is to evolve uv into a production-ready "Cargo for Python",
+    and to provide a smooth migration path from Rye to uv when the time is right.
