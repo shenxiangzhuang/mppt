@@ -57,8 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup pandoc
-        run: |
-          wget https://github.com/jgm/pandoc/releases/download/2.18/pandoc-2.18-1-amd64.deb && sudo dpkg -i pandoc-2.18-1-amd64.deb
+        uses: pandoc/actions/setup@v1
       - uses: actions/checkout@v4
         with:
             fetch-depth: 0
