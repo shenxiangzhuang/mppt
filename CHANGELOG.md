@@ -3,6 +3,14 @@
 
 ## [Unreleased]
 
+
+## [0.5.0] - 2025-01-03
+
+### Changed
+- Use uv to manage the package rather than poetry (#106)
+- Drop the support for Python 3.8 (#110)
+
+
 ## [0.4.0] - 2024-06-11
 
 ### Added

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mppt"
-version = "0.4.0"
+version = "0.5.0"
 description = "A Modern Python Package Template"
 authors = [
     {name = "Xiangzhuang Shen", email = "datahonor@gmail.com"},
@@ -20,12 +20,11 @@ classifiers=[
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-#    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.13",
 ]
 requires-python = ">= 3.9"
 dependencies = []
