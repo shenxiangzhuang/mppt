@@ -10,6 +10,7 @@
 
 [![Python](https://img.shields.io/pypi/pyversions/mppt.svg?color=%2334D058)](https://pypi.org/project/mppt/)
 [![PyPI](https://img.shields.io/pypi/v/mppt?color=%2334D058&label=pypi%20package)](https://pypi.org/project/mppt/)
+[![PyPI Downloads](https://static.pepy.tech/badge/mppt)](https://pepy.tech/projects/mppt)
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
