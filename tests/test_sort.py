@@ -11,7 +11,7 @@ sting_list = lists(text(), min_size=0, max_size=50)
 class TestQuickSort:
     @given(items=integer_list)
     @settings(max_examples=100, verbosity=Verbosity.debug)
-    def test_integer(self, items: list[float]):
+    def test_integer(self, items: list[int]):
         assert quick_sort(items) == sorted(items)
 
     @given(items=float_list)
