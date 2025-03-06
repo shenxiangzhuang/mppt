@@ -843,18 +843,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#black-mypy-isort-flake8recommended" class="md-nav__link">
+  <a href="#ruff-and-mypyrecommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Black, MyPy, Isort, Flake8(Recommended)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#black-mypy-and-ruffrecommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Black, MyPy and Ruff(Recommended)
+      Ruff and MyPy(Recommended)
     </span>
   </a>
   
@@ -991,15 +982,11 @@
 <p>Here we'll introduce the linter, formatter and code quality tools used in the project.
 We won't introduce the tools in detail, but just give a brief introduction and some examples,
 which are extracted from the official docs.</p>
-<h2 id="black-mypy-isort-flake8recommended">Black, MyPy, Isort, Flake8(Recommended)<a class="headerlink" href="#black-mypy-isort-flake8recommended" title="Permanent link">&para;</a></h2>
-<p>Now in used linters and formatters are <code>Black</code>, <code>MyPy</code>, <code>Isort</code>, <code>Flake8</code>, which are managed by <code>pre-commit</code> together.</p>
-<h2 id="black-mypy-and-ruffrecommended">Black, MyPy and Ruff(Recommended)<a class="headerlink" href="#black-mypy-and-ruffrecommended" title="Permanent link">&para;</a></h2>
-<p>After some reading<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and communication<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, I think using <code>Black</code>, <code>MyPy</code> and <code>Ruff</code> maybe a better choice.
-I'll try to explore Ruff later and try to use it in the project.</p>
-<div class="admonition note">
-<p class="admonition-title">Ruff is now in the template as extra linter and formatter</p>
-<p>Later, we may use <code>Ruff</code> to replace <code>Isort</code> and <code>Flake8</code> in the project.</p>
-</div>
+<h2 id="ruff-and-mypyrecommended">Ruff and MyPy(Recommended)<a class="headerlink" href="#ruff-and-mypyrecommended" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Linter &amp; Formatter: <a href="https://github.com/astral-sh/ruff">Ruff</a></li>
+<li>Type Checker: <a href="https://github.com/python/mypy">MyPy</a></li>
+</ul>
 <h2 id="swiss-army-knife-">Swiss Army Knife :-)<a class="headerlink" href="#swiss-army-knife-" title="Permanent link">&para;</a></h2>
 <details class="quote" open="open">
 <summary>PyCon US 2023 - An Overview of the Python Code Tool Landscape 2023</summary>
@@ -1010,7 +997,7 @@ and I found the whole thing really confusing.<sup id="fnref2:1"><a class="footno
 </details>
 <details class="note" open="open">
 <summary>The tools' categories</summary>
-<p>We use the categories defined by Al Sweigart in his blog<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<p>We use the categories defined by Al Sweigart in his blog<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 </details>
 <h3 id="pep8-pycodestyle"><a href="https://peps.python.org/pep-0008/">PEP8</a> -&gt; <a href="https://github.com/PyCQA/pycodestyle">pycodestyle</a><a class="headerlink" href="#pep8-pycodestyle" title="Permanent link">&para;</a></h3>
 <details class="quote" open="open">
@@ -1119,7 +1106,7 @@ All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>â
 <h3 id="ruff-linter-formatter"><a href="https://github.com/astral-sh/ruff">Ruff</a>: Linter &amp; Formatter<a class="headerlink" href="#ruff-linter-formatter" title="Permanent link">&para;</a></h3>
 <p>As just mentioned before, many people recommend to use <code>Ruff</code>, because it's a very cool tool.</p>
 <ul>
-<li>It's <strong>VERY</strong> fast<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
+<li>It's <strong>VERY</strong> fast.</li>
 </ul>
 <p><center>
 <img alt="" src="https://user-images.githubusercontent.com/1309177/232603516-4fb4892d-585c-4b20-b810-3db9161831e4.svg#only-light" />
@@ -1235,16 +1222,7 @@ mypy.....................................................................Passed
 <hr />
 <ol>
 <li id="fn:1">
-<p><a href="https://docs.google.com/presentation/d/1kHK5M4GpB_qSQO3aGbVzUtWaSwqsEaMqikuIeM4VDjk/edit?pli=1#slide=id.g22f3767756a_0_60">PyCon US 2023 - An Overview of the Python Code Tool Landscape 2023</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/">Python Linter Comparison 2022</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:3">
-<p><a href="https://pawamoy.github.io/posts/somewhat-modern-python-development/">Somewhat-modern Python</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:4">
-<p><a href="https://docs.astral.sh/ruff/">Ruff</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p><a href="https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/">Python Linter Comparison 2022</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
