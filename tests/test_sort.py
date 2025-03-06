@@ -9,5 +9,5 @@ float_list = lists(floats(allow_nan=False, allow_infinity=False), min_size=0, ma
 class TestQuickSort:
     @given(items=float_list)
     @settings(max_examples=300)
-    def test_float(self, items: list[float]):
+    def test_float(self, items: list[float]) -> None:
         assert quick_sort(items) == sorted(items)
