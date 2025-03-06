@@ -5,17 +5,9 @@ We won't introduce the tools in detail, but just give a brief introduction and s
 which are extracted from the official docs.
 
 
-## Black, MyPy, Isort, Flake8(Recommended)
-Now in used linters and formatters are `Black`, `MyPy`, `Isort`, `Flake8`, which are managed by `pre-commit` together.
-
-## Black, MyPy and Ruff(Recommended)
-
-After some reading[^1] and communication[^3], I think using `Black`, `MyPy` and `Ruff` maybe a better choice.
-I'll try to explore Ruff later and try to use it in the project.
-
-!!! note "Ruff is now in the template as extra linter and formatter"
-
-    Later, we may use `Ruff` to replace `Isort` and `Flake8` in the project.
+## Ruff and MyPy(Recommended)
+- Linter & Formatter: [Ruff](https://github.com/astral-sh/ruff)
+- Type Checker: [MyPy](https://github.com/python/mypy)
 
 
 ## Swiss Army Knife :-)
@@ -30,7 +22,7 @@ I'll try to explore Ruff later and try to use it in the project.
 
 ???+ note "The tools' categories"
 
-    We use the categories defined by Al Sweigart in his blog[^2].
+    We use the categories defined by Al Sweigart in his blog[^1].
 
 
 ### [PEP8](https://peps.python.org/pep-0008/) -> [pycodestyle](https://github.com/PyCQA/pycodestyle)
@@ -169,7 +161,7 @@ All done! ✨ 🍰 ✨
 
 As just mentioned before, many people recommend to use `Ruff`, because it's a very cool tool.
 
-- It's **VERY** fast[^4]
+- It's **VERY** fast.
 
 <center>
 ![](https://user-images.githubusercontent.com/1309177/232603516-4fb4892d-585c-4b20-b810-3db9161831e4.svg#only-light)
@@ -296,7 +288,4 @@ Pre-commit can be treated as a linter manager, it can manage the linters in the 
     - SQLFluff doc
 
 [//]: # (footnotes:)
-[^1]: [PyCon US 2023 - An Overview of the Python Code Tool Landscape 2023](https://docs.google.com/presentation/d/1kHK5M4GpB_qSQO3aGbVzUtWaSwqsEaMqikuIeM4VDjk/edit?pli=1#slide=id.g22f3767756a_0_60)
-[^2]: [Python Linter Comparison 2022](https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/)
-[^3]: [Somewhat-modern Python](https://pawamoy.github.io/posts/somewhat-modern-python-development/)
-[^4]: [Ruff](https://docs.astral.sh/ruff/)
+[^1]: [Python Linter Comparison 2022](https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/)
