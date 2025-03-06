@@ -1,20 +1,33 @@
+"""Hello World module."""
+
+
 def hello() -> str:
-    """
-    Returns a greeting.
+    """Returns a greeting.
 
-    >>> hello()
-    'Hello, World!'
+    Returns:
+        str: Hello, World!
 
-    :return: Hello, World!
+    Examples:
+        >>> hello()
+        'Hello, World!'
     """
     return "Hello, World!"
 
 
-def add(a, b):
-    """
-    >>> add(1, 2)
-    3
-    >>> add(2, 3)
-    5
+def add(a: float, b: float) -> float:
+    """Adds two numbers together.
+
+    Args:
+        a: First number
+        b: Second number
+
+    Returns:
+        The sum of a and b
+
+    Examples:
+        >>> add(1, 2)
+        3
+        >>> add(2, 3)
+        5
     """
     return a + b
