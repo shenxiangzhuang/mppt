@@ -16,8 +16,6 @@ def quick_sort(xs: list[float]) -> list[float]:
         >>> quick_sort([1.1, 3.3, 2.2, 4.4, 5.5])
         [1.1, 2.2, 3.3, 4.4, 5.5]
     """
-    return (
-        (quick_sort([x for x in xs[1:] if x <= xs[0]]) + [xs[0]] + quick_sort([x for x in xs[1:] if x > xs[0]]))
-        if len(xs) > 1
-        else xs
-    )
+    if len(xs) <= 1:
+        return xs
+    return [*quick_sort([x for x in xs[1:] if x <= xs[0]]), xs[0], *quick_sort([x for x in xs[1:] if x > xs[0]])]
