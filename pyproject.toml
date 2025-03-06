@@ -1,11 +1,6 @@
-[build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
-
-
 [project]
 name = "mppt"
-version = "0.5.0"
+version = "0.6.0"
 description = "A Modern Python Package Template"
 authors = [
     {name = "Xiangzhuang Shen", email = "datahonor@gmail.com"},
@@ -63,6 +58,11 @@ docs = [
 [tool.setuptools]
 zip-safe = true
 include-package-data = true
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
 
 [tool.setuptools.packages.find]
 include = ["mppt*"]

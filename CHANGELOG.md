@@ -3,6 +3,14 @@
 
 ## [Unreleased]
 
+## [0.6.0] - 2025-03-06
+
+### Added
+- CI: add mypy and ruff in test workflow
+
+### Changed
+- Linter & formatter: use ruff only, remove isort, black, flake8
+
 
 ## [0.5.0] - 2025-01-03
 
