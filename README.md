@@ -22,11 +22,3 @@
 # Documentation
 
 [https://datahonor.com/mppt/](https://datahonor.com/mppt/)
-
-# News
-
-- 🥳🥳🥳[2024-07-19]
-  - <details ><summary>Presentation: MPPT Practice</summary><script src="https://asciinema.org/a/668984.js" id="asciicast-668984" async="true"></script></details>
-
-- 🥳🥳🥳[2023-12-07] **Presentation: MPPT Theory**
-  - Check the pdf file [here](https://github.com/shenxiangzhuang/mppt/blob/master/presentation/mppt-theory.pdf)
