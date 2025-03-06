@@ -31,6 +31,12 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --dev
 
+      - name: Lint with Mypy
+        run: mypy .
+
+      - name: Lint with Ruff
+        run: ruff check
+
       - name: Run tests and generate coverage report
         run: uv run pytest --doctest-modules -v --cov=mppt --cov-fail-under 90 --cov-report=term --cov-report=xml --cov-report=html mppt tests
 
