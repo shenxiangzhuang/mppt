@@ -8,7 +8,7 @@ on:
 
 jobs:
   docs:
-    name: ${{ matrix.task }} docs (python-${{ matrix.python-version }}, ${{ matrix.os }})
+    name: Docs (python-${{ matrix.python-version }}, ${{ matrix.os }})
     strategy:
       matrix:
         python-version:
@@ -17,17 +17,8 @@ jobs:
           - ubuntu-latest
           - macos-latest
           - windows-latest
-        task:
-          - Build
-        include:
-          - task: Deploy
-            os: ubuntu-latest
-            python-version: "3.13"
-            deploy: true
       fail-fast: false
     runs-on: ${{ matrix.os }}
-    # Only run deploy job on push to master
-    if: ${{ !(matrix.deploy == true) || (github.event_name == 'push' && github.ref == 'refs/heads/master') }}
     steps:
       - name: Setup pandoc
         uses: pandoc/actions/setup@v1
@@ -53,8 +44,9 @@ jobs:
       - name: Build docs
         run: uv run mkdocs build
 
+      # Only deploy on ubuntu-latest with Python 3.13 when pushing to master
       - name: Deploy docs
-        if: matrix.deploy == true
+        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.13' && github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: uv run mkdocs gh-deploy --force
 
       - name: Minimize uv cache
