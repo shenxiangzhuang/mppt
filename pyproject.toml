@@ -123,10 +123,12 @@ indent-width = 4
 target-version = "py39"
 
 [tool.ruff.lint]
-select = ["ALL"]
-ignore = [
-    "S101",    # assert
-    "INP001"   # implicit-namespace-package
+select = [
+    'F',      # Pyflakes
+    'E',      # pycodestyle (Error)
+    'I',      # isort
+    'D',      # pydocstyle
+    'UP',     # pyupgrade
 ]
 pydocstyle = { convention = "google" }
 
