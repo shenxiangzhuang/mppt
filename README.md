@@ -1,6 +1,5 @@
 # MPPT: A Modern Python Package Template
 
-<center>
 
 [![Python](https://img.shields.io/pypi/pyversions/mppt.svg?color=%2334D058)](https://pypi.org/project/mppt/)
 [![PyPI](https://img.shields.io/pypi/v/mppt?color=%2334D058&label=pypi%20package)](https://pypi.org/project/mppt/)
@@ -14,7 +13,6 @@
 [![Test](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml)
 [![Codecov](https://codecov.io/gh/shenxiangzhuang/mppt/branch/master/graph/badge.svg)](https://codecov.io/gh/shenxiangzhuang/mppt)
 
-</center>
 
 # About
 [MPPT](https://github.com/shenxiangzhuang/mppt): A **M**odern **P**ython **P**ackage **T**emplate.
