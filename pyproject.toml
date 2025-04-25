@@ -1,15 +1,13 @@
 [project]
 name = "mppt"
-version = "0.6.0"
+version = "0.7.0"
 description = "A Modern Python Package Template"
-authors = [
-    {name = "Xiangzhuang Shen", email = "datahonor@gmail.com"},
-]
-license = {text = "MIT"}
+authors = [{ name = "Xiangzhuang Shen", email = "datahonor@gmail.com" }]
+license = { text = "MIT" }
 readme = "README.md"
 
 
-classifiers=[
+classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
@@ -124,11 +122,11 @@ target-version = "py39"
 
 [tool.ruff.lint]
 select = [
-    'F',      # Pyflakes
-    'E',      # pycodestyle (Error)
-    'I',      # isort
-    'D',      # pydocstyle
-    'UP',     # pyupgrade
+    'F',  # Pyflakes
+    'E',  # pycodestyle (Error)
+    'I',  # isort
+    'D',  # pydocstyle
+    'UP', # pyupgrade
 ]
 pydocstyle = { convention = "google" }
 
