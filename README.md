@@ -16,7 +16,7 @@
 
 [MPPT](https://github.com/shenxiangzhuang/mppt): A **M**odern **P**ython **P**ackage **T**emplate.
 
-## Quick Start
+## Get Started
 
 1. Use this template repository to create your own project repository by clicking the "Use this template" button on GitHub or visiting [MPPT](https://github.com/shenxiangzhuang/mppt).
 
