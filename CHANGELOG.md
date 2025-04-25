@@ -2,6 +2,24 @@
 
 ## [Unreleased]
 
+## [0.7.0] - 2025-04-25
+
+### Added
+
+* add(test): add mutmut pkg by @shenxiangzhuang in [#164](https://github.com/shenxiangzhuang/mppt/pull/164)
+* add(doc): sphinx-immaterial theme by @shenxiangzhuang in [#165](https://github.com/shenxiangzhuang/mppt/pull/165)
+
+### Changed
+
+* chore(linting): update Ruff lint configuration by @shenxiangzhuang in [#157](https://github.com/shenxiangzhuang/mppt/pull/157)
+* pkg: remove lock file by @shenxiangzhuang in [#158](https://github.com/shenxiangzhuang/mppt/pull/158)
+* chore: remove dev container by @shenxiangzhuang in [#161](https://github.com/shenxiangzhuang/mppt/pull/161)
+
+### CI/CD
+
+* ci: uv cache prune by @shenxiangzhuang in [#150](https://github.com/shenxiangzhuang/mppt/pull/150)
+* ci(publish): use pypi trusted publisher by @shenxiangzhuang in [#162](https://github.com/shenxiangzhuang/mppt/pull/162)
+
 ## [0.6.0] - 2025-03-06
 
 ### Added
