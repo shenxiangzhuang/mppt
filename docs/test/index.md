@@ -1,11 +1,12 @@
 # Testing
 
-
 ## Pytest
+
 [Pytest](https://docs.pytest.org/en/stable/) is a testing framework for Python.
 It is a mature full-featured Python testing tool.
 
 ## Doctest
+
 Python supports [doctest](https://docs.python.org/3/library/doctest.html),
 which is very convenient for testing small code snippets within docstrings.
 And, it's make the usage of the code more clear.
@@ -41,10 +42,9 @@ def add(a, b):
         pytest --doctest-modules
         ```
 
-
 ## Hypothesis
-[Hypothesis](https://hypothesis.readthedocs.io/en/latest/) is a library for **property based testing**.
 
+[Hypothesis](https://hypothesis.readthedocs.io/en/latest/) is a library for **property based testing**.
 
 We can print the statistics of the hypothesis testing by adding the following command line option:
 
@@ -93,11 +93,14 @@ RUN: `pytest --hypothesis-show-statistics tests/test_sort.py`
       - Stopped because settings.max_examples=300
     ```
 
+## Mutmut
+
+[Mutmut](https://github.com/boxed/mutmut) is a mutation testing tool for Python.
+
 
 ## Locust
 
 [Locust](https://locust.io/) is an easy-to-use, distributed, user load testing(stress testing) tool.
-
 
 ## Codecov
 
