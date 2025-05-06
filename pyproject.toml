@@ -3,7 +3,7 @@ name = "mppt"
 version = "0.7.0"
 description = "A Modern Python Package Template"
 authors = [{ name = "Xiangzhuang Shen", email = "datahonor@gmail.com" }]
-license = { text = "MIT" }
+license = "MIT"
 readme = "README.md"
 
 
@@ -11,7 +11,6 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
