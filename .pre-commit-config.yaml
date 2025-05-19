@@ -15,8 +15,10 @@ repos:
     hooks:
       # Run the linter.
       - id: ruff
+        args: ["--config=pyproject.toml"]
       # Run the formatter.
       - id: ruff-format
+        args: ["--config=pyproject.toml"]
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.15.0  # Use the sha / tag you want to point at
     hooks:
