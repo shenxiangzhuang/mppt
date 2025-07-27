@@ -31,7 +31,7 @@ jobs:
         uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-          cache-dependency-glob: "uv.lock"
+          cache-dependency-glob: "project.toml"
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
