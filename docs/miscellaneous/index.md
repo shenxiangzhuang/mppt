@@ -3,10 +3,6 @@
 ## Conventional Commits
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-!!! tip "Tools"
-
-    - [commitizen](https://github.com/commitizen-tools/commitizen): Commitizen is release management tool designed for teams.
-
 ## Change Log
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
