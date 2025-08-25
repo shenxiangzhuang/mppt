@@ -14,7 +14,7 @@
     "include_codecov": ["y", "n"],
     "development_status": [
         "1 - Planning",
-        "2 - Pre-Alpha", 
+        "2 - Pre-Alpha",
         "3 - Alpha",
         "4 - Beta",
         "5 - Production/Stable",
