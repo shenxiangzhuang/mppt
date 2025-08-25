@@ -1,29 +1,27 @@
 [project]
-name = "mppt"
-version = "0.7.0"
-description = "A Modern Python Package Template"
-authors = [{ name = "Xiangzhuang Shen", email = "datahonor@gmail.com" }]
-license = "MIT"
+name = "{{ cookiecutter.package_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_short_description }}"
+authors = [{ name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" }]
+license = "{{ cookiecutter.license }}"
 readme = "README.md"
 
 
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: {{ cookiecutter.development_status }}",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
+    # PYTHON_VERSION_CLASSIFIERS_PLACEHOLDER
 ]
-requires-python = ">= 3.9"
+requires-python = ">= {{ cookiecutter.python_min_version }}"
 dependencies = []
 
 [project.optional-dependencies]
 dev = [
+    {%- if cookiecutter.include_pre_commit == "y" %}
     "pre-commit",
+    {%- endif %}
     "ipython",
     "mypy",
     "ruff",
@@ -31,8 +29,8 @@ dev = [
     "pytest-cov",
     "pytest-sugar",
     "hypothesis>=6.112.0",
-    "cookiecutter",
 ]
+{%- if cookiecutter.include_docs == "y" %}
 docs = [
     "mkdocs",
     "mkdocs-material",
@@ -44,13 +42,14 @@ docs = [
     "mkdocs-git-committers-plugin-2",
     "mkdocs-git-revision-date-localized-plugin",
 ]
+{%- endif %}
 
 [project.urls]
-"Homepage" = "https://shenxiangzhuang.github.io/mppt"
-"Bug Tracker" = "https://shenxiangzhuang.github.io/mppt/issues"
-"Documentation" = "https://shenxiangzhuang.github.io/mppt"
-"Source Code" = "https://github.com/shenxiangzhuang/mppt"
-"Release Notes" = "https://shenxiangzhuang.github.io/mppt/changelog/"
+"Homepage" = "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.package_name }}"
+"Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}/issues"
+"Documentation" = "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.package_name }}"
+"Source Code" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}"
+"Release Notes" = "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.package_name }}/changelog/"
 
 [tool.setuptools]
 zip-safe = true
@@ -62,7 +61,7 @@ build-backend = "setuptools.build_meta"
 
 
 [tool.setuptools.packages.find]
-include = ["mppt*"]
+include = ["{{ cookiecutter.package_name }}*"]
 namespaces = false
 
 

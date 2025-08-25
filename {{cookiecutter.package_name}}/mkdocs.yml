@@ -1,0 +1,72 @@
+site_name: {{ cookiecutter.package_name }}
+repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}
+repo_name: {{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}
+site_description: {{ cookiecutter.project_short_description }}
+site_author: {{ cookiecutter.author_name }}
+copyright: Copyright &copy; {% now 'utc', '%Y' %} {{ cookiecutter.author_name }}
+
+# Page tree
+nav:
+  - Home: index.md
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - content.action.edit
+    - content.action.view
+    - announce.dismiss
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.prune
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+    - content.code.annotate
+
+docs_dir: docs
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/{{ cookiecutter.github_username }}/
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      linenums_style: pymdownx.inline
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+
+plugins:
+  - search
