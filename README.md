@@ -18,7 +18,43 @@
 
 ## Get Started
 
-1. Use this template repository to create your own project repository by clicking the "Use this template" button on GitHub or visiting [MPPT](https://github.com/shenxiangzhuang/mppt).
+### Option 1: Using Cookiecutter (Recommended)
+
+The easiest way to use this template is with cookiecutter, which will interactively prompt you for all the necessary information:
+
+1. Install cookiecutter:
+   ```bash
+   pip install cookiecutter
+   # or
+   uv tool install cookiecutter
+   ```
+
+2. Generate your project:
+   ```bash
+   cookiecutter https://github.com/shenxiangzhuang/mppt.git
+   ```
+
+3. Answer the prompts to customize your project:
+   - Project name
+   - Author information
+   - GitHub username
+   - Package description
+   - Python versions to support
+   - Optional features (docs, pre-commit, GitHub Actions, etc.)
+
+4. Navigate to your new project and set up the development environment:
+   ```bash
+   cd your-project-name
+   uv venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   uv sync --all-extras --dev
+   ```
+
+### Option 2: Using GitHub Template
+
+Alternatively, you can use this as a GitHub template:
+
+1. Click the "Use this template" button on GitHub or visit [MPPT](https://github.com/shenxiangzhuang/mppt).
 
 2. Replace all instances of MPPT, shenxiangzhuang, and other template-specific details with your own information:
    - Project name, author, and GitHub username in all files

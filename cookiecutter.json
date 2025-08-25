@@ -1,0 +1,33 @@
+{
+    "package_name": "my_python_package",
+    "project_short_description": "A modern Python package",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "github_username": "yourusername",
+    "version": "0.1.0",
+    "python_min_version": ["3.9", "3.10", "3.11", "3.12", "3.13"],
+    "python_max_version": ["3.9", "3.10", "3.11", "3.12", "3.13"],
+    "license": ["MIT", "Apache-2.0", "BSD-3-Clause", "GPL-3.0", "LGPL-2.1"],
+    "include_docs": ["y", "n"],
+    "include_pre_commit": ["y", "n"],
+    "include_github_actions": ["y", "n"],
+    "include_codecov": ["y", "n"],
+    "development_status": [
+        "1 - Planning",
+        "2 - Pre-Alpha", 
+        "3 - Alpha",
+        "4 - Beta",
+        "5 - Production/Stable",
+        "6 - Mature",
+        "7 - Inactive"
+    ],
+    "command_line_interface": ["Click", "Argparse", "None"],
+    "_copy_without_render": [
+        "*.svg",
+        "*.png",
+        "*.jpg",
+        "*.jpeg",
+        "*.gif",
+        "docs/overrides/main.html"
+    ]
+}

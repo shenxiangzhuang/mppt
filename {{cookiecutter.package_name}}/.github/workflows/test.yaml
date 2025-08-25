@@ -1,0 +1,44 @@
+name: Test
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${% raw %}{{ matrix.python-version }}{% endraw %}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${% raw %}{{ matrix.python-version }}{% endraw %}
+    
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
+    
+    - name: Install dependencies
+      run: |
+        uv sync --all-extras --dev
+    
+    - name: Run tests
+      run: |
+        uv run pytest --cov={{ cookiecutter.package_name }} --cov-report=xml
+    {%- if cookiecutter.include_codecov == "y" %}
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
+    {%- endif %}
