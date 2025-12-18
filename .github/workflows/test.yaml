@@ -29,8 +29,8 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --dev
 
-      - name: Lint with Mypy
-        run: uv run mypy .
+      - name: Lint with ty
+        run: uv run ty check
 
       - name: Lint with Ruff
         run: uv run ruff check

@@ -23,7 +23,7 @@ dependencies = []
 dev = [
     "pre-commit",
     "ipython",
-    "mypy",
+    "ty",
     "ruff",
     "pytest",
     "pytest-cov",
@@ -63,9 +63,7 @@ include = ["mppt*"]
 namespaces = false
 
 
-[tool.mypy]
-ignore_missing_imports = true
-strict = true
+[tool.ty]
 
 
 # Ruff configuration: https://docs.astral.sh/ruff/configuration/#configuring-ruff
