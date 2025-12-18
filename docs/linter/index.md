@@ -5,9 +5,9 @@ We won't introduce the tools in detail, but just give a brief introduction and s
 which are extracted from the official docs.
 
 
-## Ruff and MyPy(Recommended)
+## Ruff and ty (Recommended)
 - Linter & Formatter: [Ruff](https://github.com/astral-sh/ruff)
-- Type Checker: [MyPy](https://github.com/python/mypy)
+- Type Checker: [ty](https://github.com/astral-sh/ty)
 
 
 ## Swiss Army Knife :-)
@@ -168,15 +168,15 @@ As just mentioned before, many people recommend to use `Ruff`, because it's a ve
 </center>
 
 
-### [Mypy](https://github.com/python/mypy): Type Checker
-We use an example from official
-[docs](https://mypy.readthedocs.io/en/stable/getting_started.html#dynamic-vs-static-typing) of mypy.
+### [ty](https://github.com/astral-sh/ty): Type Checker
+
+[ty](https://github.com/astral-sh/ty) is an extremely fast Python type checker written in Rust, from the creators of Ruff.
 
 !!! example "greeting"
 
     === "Without type hint"
 
-        A function without type annotations is considered to be **dynamically typed** by mypy:
+        A function without type annotations is considered to be **dynamically typed**:
 
         ```python
         def greeting(name):
@@ -185,8 +185,7 @@ We use an example from official
         greeting(123)
         greeting(b"Alice")
         ```
-        By default, mypy will not type check dynamically typed functions.
-        This means that with a few exceptions, mypy will not report any errors with regular unannotated Python.
+        By default, ty will not type check dynamically typed functions.
 
     === "With type hint"
 
@@ -197,15 +196,10 @@ We use an example from official
         greeting(3)
         ```
         This function is now **statically typed**:
-        mypy will use the provided type hints to detect incorrect use of the greeting function and
+        ty will use the provided type hints to detect incorrect use of the greeting function and
         incorrect use of variables within the greeting function.
 
-        After run `mypy hello.py`, we got the following result:
-
-        ```bash
-        hello.py:5: error: Argument 1 to "greeting" has incompatible type "int"; expected "str"  [arg-type]
-        Found 1 error in 1 file (checked 1 source file)
-        ```
+        After running `ty check hello.py`, we get type errors for incorrect usage.
 
 
 ### [Pre-commit](https://pre-commit.com/)
@@ -241,11 +235,14 @@ Pre-commit can be treated as a linter manager, it can manage the linters in the 
             rev: 6.1.0
             hooks:
               - id: flake8
-          - repo: https://github.com/pre-commit/mirrors-mypy
-            rev: v1.7.1  # Use the sha / tag you want to point at
+          - repo: local
             hooks:
-              - id: mypy
-                args: [--strict, --ignore-missing-imports]
+              - id: ty
+                name: ty
+                entry: uv run ty check
+                language: system
+                types: [python]
+                pass_filenames: false
         ```
 
     === "Run result"
@@ -259,7 +256,7 @@ Pre-commit can be treated as a linter manager, it can manage the linters in the 
         black....................................................................Passed
         isort....................................................................Passed
         flake8...................................................................Passed
-        mypy.....................................................................Passed
+        ty.......................................................................Passed
         ```
 
 

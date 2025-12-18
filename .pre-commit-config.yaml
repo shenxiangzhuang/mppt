@@ -1,3 +1,6 @@
+ci:
+  skip: [ty]
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -19,10 +22,11 @@ repos:
       # Run the formatter.
       - id: ruff-format
         args: ["--config=pyproject.toml"]
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.1  # Use the sha / tag you want to point at
+  - repo: local
     hooks:
-      - id: mypy
-        args: ["--install-types", "--non-interactive", "--ignore-missing-imports", "--check-untyped-defs",
-               "--allow-untyped-decorators",
-        ]
+      - id: ty
+        name: ty
+        entry: uv run ty check
+        language: system
+        types: [python]
+        pass_filenames: false

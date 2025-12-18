@@ -6,7 +6,7 @@
 [![GitHub License](https://img.shields.io/github/license/shenxiangzhuang/mppt)](https://github.com/shenxiangzhuang/mppt/blob/master/LICENSE)
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+[![ty](https://img.shields.io/badge/ty-checked-blue)](https://github.com/astral-sh/ty)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 [![Build Docs](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml)
 [![Test](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml)
