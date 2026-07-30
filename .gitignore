@@ -1,6 +1,3 @@
-# uv
-uv.lock
-
 # ide cache
 .vscode
 .idea
@@ -144,16 +141,11 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
+# Zensical documentation output
 /site
 
 # ty
 .ty_cache/
-
-# mypy (legacy)
-.mypy_cache/
-.dmypy.json
-dmypy.json
 
 # Pyre type checker
 .pyre/

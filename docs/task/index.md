@@ -11,7 +11,7 @@
 We can use it to run some commands concisely:
 ```makefile
 run_doc_server:
-	mkdocs serve
+	uv run --group docs zensical serve
 
 run_local_gunicorn:
 	gunicorn package.app.main:app --worker-class uvicorn.workers.UvicornWorker

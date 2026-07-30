@@ -1,9 +1,14 @@
+[build-system]
+requires = ["uv_build>=0.11.26,<0.12"]
+build-backend = "uv_build"
+
 [project]
 name = "mppt"
 version = "0.8.0"
 description = "A Modern Python Package Template"
 authors = [{ name = "Xiangzhuang Shen", email = "datahonor@gmail.com" }]
 license = "MIT"
+license-files = ["LICENSE"]
 readme = "README.md"
 
 
@@ -19,30 +24,19 @@ classifiers = [
 requires-python = ">= 3.12"
 dependencies = []
 
-[tool.uv]
-default-groups = ["dev", "docs"]
-
 [dependency-groups]
 dev = [
-    "pre-commit",
-    "ipython",
-    "ty",
-    "ruff",
-    "pytest",
-    "pytest-cov",
-    "pytest-sugar",
-    "hypothesis>=6.112.0",
+    "hypothesis>=6.163.0",
+    "ipython>=9.15.0",
+    "prek>=0.4.11",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "pytest-sugar>=1.1.1",
+    "ruff>=0.16.0",
+    "ty>=0.0.65",
 ]
 docs = [
-    "mkdocs",
-    "mkdocs-material",
-    "mkdocs-material-extensions",
-    "mkdocstrings",
-    "mkdocs-bibtex",
-    "mkdocstrings-python",
-    "mkdocs-autorefs",
-    "mkdocs-git-committers-plugin-2",
-    "mkdocs-git-revision-date-localized-plugin",
+    "zensical>=0.0.51",
 ]
 
 [project.urls]
@@ -52,22 +46,8 @@ docs = [
 "Source Code" = "https://github.com/shenxiangzhuang/mppt"
 "Release Notes" = "https://shenxiangzhuang.github.io/mppt/changelog/"
 
-[tool.setuptools]
-zip-safe = true
-include-package-data = true
-
-[build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
-
-
-[tool.setuptools.packages.find]
-include = ["mppt*"]
-namespaces = false
-
-
-[tool.ty]
-
+[tool.ty.src]
+include = ["src", "tests"]
 
 # Ruff configuration: https://docs.astral.sh/ruff/configuration/#configuring-ruff
 [tool.ruff]
@@ -80,7 +60,6 @@ exclude = [
     ".git-rewrite",
     ".hg",
     ".ipynb_checkpoints",
-    ".mypy_cache",
     ".nox",
     ".pants.d",
     ".pyenv",

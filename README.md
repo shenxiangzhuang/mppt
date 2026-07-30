@@ -7,7 +7,7 @@
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![ty](https://img.shields.io/badge/ty-checked-blue)](https://github.com/astral-sh/ty)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![prek](https://img.shields.io/badge/prek-enabled-brightgreen)](https://prek.j178.dev/)
 [![Build Docs](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml)
 [![Test](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml)
 [![Codecov](https://codecov.io/gh/shenxiangzhuang/mppt/branch/master/graph/badge.svg)](https://codecov.io/gh/shenxiangzhuang/mppt)
@@ -33,15 +33,11 @@
    git clone https://github.com/your-username/your-project.git
    cd your-project
 
-   # Set up environment using uv
-   uv venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   # Create the environment and install development dependencies
+   uv sync
 
-   # Install development dependencies with uv
-   uv sync --all-extras --dev
-
-   # Initialize pre-commit hooks
-   uv run pre-commit install
+   # Install the prek Git hooks
+   uv run prek install
    ```
 
 4. Start developing your package by modifying the code structure as needed.
@@ -55,7 +51,7 @@
 6. Preview documentation locally:
 
    ```bash
-   uv run mkdocs serve
+   uv run --group docs zensical serve
    ```
 
    Then visit [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.

@@ -1,0 +1,17 @@
+[[repos]]
+repo = "builtin"
+hooks = [
+    { id = "check-toml" },
+    { id = "check-yaml" },
+    { id = "end-of-file-fixer" },
+    { id = "trailing-whitespace", exclude = ".+\\.csv" },
+    { id = "mixed-line-ending", args = ["--fix=lf"] },
+]
+
+[[repos]]
+repo = "local"
+hooks = [
+    { id = "ruff-check", name = "ruff check", entry = "uv run ruff check --config=pyproject.toml", language = "system", types_or = ["python", "pyi"] },
+    { id = "ruff-format", name = "ruff format", entry = "uv run ruff format --config=pyproject.toml", language = "system", types_or = ["python", "pyi"] },
+    { id = "ty", name = "ty check", entry = "uv run ty check", language = "system", pass_filenames = false, always_run = true, require_serial = true },
+]
