@@ -1,47 +1,40 @@
 # Documentation
 
-## Mkdocs(Recommended)
+## Zensical (Recommended)
 
-!!! note "Mkdocs"
+[Zensical](https://zensical.org/) is a modern static site generator for project
+documentation. Documentation is written in Markdown and configured in a native
+`zensical.toml` file.
 
-    [Mkdocs](https://www.mkdocs.org/) is a fast, simple and downright gorgeous static site generator
-    that's geared towards building project documentation. Documentation source files are written in Markdown,
-    and configured with a single YAML configuration file.
+This template intentionally keeps the configuration minimal:
 
-### Deploy the docs in GitHub Pages
+```toml
+[project]
+site_name = "MPPT"
+site_url = "https://shenxiangzhuang.github.io/mppt/"
+```
 
-Some configuration is needed to deploy the documentation site to GitHub Pages.
+Preview the documentation locally:
 
-!!! tip "Give the GitHub Action permission to deploy the docs"
+```bash
+uv run --group docs zensical serve
+```
 
-    - In the repository: `Setting` -> `Actions` -> `Workflow permissions`: Select `Read and write permissions`
+Build the same strict output used by CI:
 
+```bash
+uv run --group docs zensical build --clean --strict
+```
 
+## GitHub Pages
 
-## Why Mkdocs?
-
-### Markdown is better than reStructuredText
-
-Compare to reStructuredText, Markdown is more popular and easier to use.
-
-### Material theme is Awesome
-
-[Material theme](https://squidfunk.github.io/mkdocs-material/)
-is a theme for Mkdocs, it is a modern theme with a focus on **usability** and **customizability**.
-
-!!! note "Material theme: Documentation that simply works"
-
-    Write your documentation in Markdown and create a professional static site in minutes – searchable, customizable,
-    in 60+ languages, for all devices.
-
+The documentation workflow builds on pull requests and uploads/deploys the
+generated `site/` artifact after changes reach `master`. Configure GitHub Pages
+to use **GitHub Actions** as its source before the first deployment.
 
 ## Alternatives
 
 ### Sphinx
 
-Some old projects still use [Sphinx](https://www.sphinx-doc.org/) to generate documentation.
-But reStructuredText is still not easy to use compare to Markdown.
-
-!!! note "Sphinx-Immaterial Theme"
-
-    [Sphinx-Immaterial Theme](https://github.com/jbms/sphinx-immaterial/): Adaptation of the popular mkdocs-material material design theme to the sphinx documentation system
+[Sphinx](https://www.sphinx-doc.org/) remains a common choice for projects that
+prefer reStructuredText or need its extension ecosystem.

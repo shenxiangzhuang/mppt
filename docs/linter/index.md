@@ -17,12 +17,12 @@ which are extracted from the official docs.
 
     There are a few of them out there. I really didn't understand what I was getting myself into.
     I had heard of some of them, but many of them have similar names and some I had never heard of,
-    and I found the whole thing really confusing.[^1] - Al Sweigart
+    and I found the whole thing really confusing. - Al Sweigart
 
 
 ???+ note "The tools' categories"
 
-    We use the categories defined by Al Sweigart in his blog[^1].
+    We use the categories from Al Sweigart's overview of the Python code-tool landscape.
 
 
 ### [PEP8](https://peps.python.org/pep-0008/) -> [pycodestyle](https://github.com/PyCQA/pycodestyle)
@@ -86,14 +86,12 @@ from __future__ import absolute_import
 import os
 import sys
 
-from third_party import (lib1, lib2, lib3, lib4, lib5, lib6, lib7, lib8,
-                         lib9, lib10, lib11, lib12, lib13, lib14, lib15)
+from third_party import lib1, lib2, lib3, lib4, lib5, lib6, lib7, lib8, lib9, lib10, lib11, lib12, lib13, lib14, lib15
 
 from my_lib import Object, Object2, Object3
 
 print("Hey")
 print("yo")
-
 ```
 
 ### [Flake8](https://github.com/PyCQA/flake8): Error & Style Linter, Complexity Analysis
@@ -103,7 +101,7 @@ For example, we have a file `hello.py`:
 !!! example "hello.py"
 
     ```python
-    print ( "Hello, World" )
+    print("Hello, World")
     ```
 
 After running `flake8 hello.py`, we got the following result:
@@ -137,7 +135,7 @@ With the file `hello.py`:
 !!! example "hello.py"
 
     ```python
-    print ( "Hello, World" )
+    print("Hello, World")
     ```
 
 After running `black hello.py`, the code style is fixed:
@@ -180,7 +178,8 @@ As just mentioned before, many people recommend to use `Ruff`, because it's a ve
 
         ```python
         def greeting(name):
-            return 'Hello ' + name
+            return "Hello " + name
+
 
         greeting(123)
         greeting(b"Alice")
@@ -191,7 +190,8 @@ As just mentioned before, many people recommend to use `Ruff`, because it's a ve
 
         ```python
         def greeting(name: str) -> str:
-            return 'Hello ' + name
+            return "Hello " + name
+
 
         greeting(3)
         ```
@@ -202,73 +202,41 @@ As just mentioned before, many people recommend to use `Ruff`, because it's a ve
         After running `ty check hello.py`, we get type errors for incorrect usage.
 
 
-### [Pre-commit](https://pre-commit.com/)
-Pre-commit can be treated as a linter manager, it can manage the linters in the project and run them in a batch.
+### [prek](https://prek.j178.dev/)
 
+prek manages repository hooks with a native TOML configuration. This template
+uses its built-in Rust hooks for file hygiene and local project tools for Ruff
+and ty, so it does not clone remote hook repositories or create separate hook
+environments.
 
-!!! example "Pre-commit run result"
+!!! example "prek configuration"
 
-    === "Config"
+    ```toml
+    [[repos]]
+    repo = "builtin"
+    hooks = [
+        { id = "check-toml" },
+        { id = "check-yaml" },
+        { id = "end-of-file-fixer" },
+        { id = "trailing-whitespace" },
+        { id = "mixed-line-ending", args = ["--fix=lf"] },
+    ]
 
-        ```yaml
-        repos:
-          - repo: https://github.com/pre-commit/pre-commit-hooks
-            rev: v4.5.0
-            hooks:
-              - id: check-toml
-              - id: check-yaml
-              - id: end-of-file-fixer
-              - id: trailing-whitespace
-                exclude: .+\.csv
-              - id: mixed-line-ending
-                args: [--fix=lf]
-          - repo: https://github.com/psf/black
-            rev: 23.11.0
-            hooks:
-              - id: black
-          - repo: https://github.com/pycqa/isort
-            rev: 5.12.0
-            hooks:
-              - id: isort
-                args: ["--profile", "black"]
-          - repo: https://github.com/pycqa/flake8
-            rev: 6.1.0
-            hooks:
-              - id: flake8
-          - repo: local
-            hooks:
-              - id: ty
-                name: ty
-                entry: uv run ty check
-                language: system
-                types: [python]
-                pass_filenames: false
-        ```
+    [[repos]]
+    repo = "local"
+    hooks = [
+        { id = "ruff-check", name = "ruff check", entry = "uv run ruff check", language = "system", types_or = ["python", "pyi"] },
+        { id = "ruff-format", name = "ruff format", entry = "uv run ruff format", language = "system", types_or = ["python", "pyi"] },
+        { id = "ty", name = "ty check", entry = "uv run ty check", language = "system", pass_filenames = false, always_run = true },
+    ]
+    ```
 
-    === "Run result"
+Install the Git hooks and check the whole repository:
 
-        ```bash
-        check toml...............................................................Passed
-        check yaml...............................................................Passed
-        fix end of files.........................................................Passed
-        trim trailing whitespace.................................................Passed
-        mixed line ending........................................................Passed
-        black....................................................................Passed
-        isort....................................................................Passed
-        flake8...................................................................Passed
-        ty.......................................................................Passed
-        ```
-
-
-
-
-???+ tip "Pre-commit quick start (with Poetry)"
-
-    - Fellow the `Quick start` in [https://pre-commit.com/](https://pre-commit.com/#quick-start)
-    - Run `poetry add pre-commit` to install `pre-commit` into the project
-    - Run `pre-commit install` to install the hooks
-    - Run `poetry shell` into the created python venv environment
-    - Run `pre-commit run -a` to check all the files in the project
+```bash
+uv run prek install
+uv run prek run --all-files
+```
 
 
 
@@ -283,6 +251,3 @@ Pre-commit can be treated as a linter manager, it can manage the linters in the 
 
     SQLFluff is an open source, dialect-flexible and configurable SQL linter. Designed with ELT applications in mind, SQLFluff also works with Jinja templating and dbt. SQLFluff will auto-fix most linting errors, allowing you to focus your time on what matters.
     - SQLFluff doc
-
-[//]: # (footnotes:)
-[^1]: [Python Linter Comparison 2022](https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/)

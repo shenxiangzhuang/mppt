@@ -5,7 +5,8 @@
 </center>
 
 ## Why, What and How
-Most of the illustration is excerpted from *Software Engineering from Google*[@google-sre].
+Most of the illustration is adapted from
+[*Software Engineering at Google*](https://abseil.io/resources/swe-book).
 
 ### Why
 To be honest, it is almost impossible to avoid importing dependencies in our projects.
@@ -89,10 +90,9 @@ It speeds up the dependency resolution & installation process a lot.
 
 !!! tip "uv"
 
-    uv now is in rapid development and is not yet production ready.
-    So we recommend you to use Poetry for now.
-    But uv is a promising package manager which will be the game changer in the future, IMHO.
-    So keep an eye on it and try it if you can!
+    uv manages Python versions, dependency resolution, lockfiles, project
+    environments, builds, and publishing. This template uses uv's native build
+    backend and the standard `src/` package layout.
 
 
 

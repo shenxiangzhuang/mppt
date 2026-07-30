@@ -6,48 +6,46 @@ on:
       - master
   pull_request:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  docs:
-    name: Docs (python-${{ matrix.python-version }}, ${{ matrix.os }})
-    strategy:
-      matrix:
-        python-version:
-          - "3.12"
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-      fail-fast: false
-    runs-on: ${{ matrix.os }}
+  build:
+    name: Build docs (python-3.14, ubuntu-latest)
+    runs-on: ubuntu-latest
     steps:
-      - name: Setup pandoc
-        uses: pandoc/actions/setup@v1
-
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
+      - name: Configure GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/configure-pages@v6.0.0
+      - uses: actions/checkout@v7.0.1
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v9.0.0
         with:
           enable-cache: true
-          cache-dependency-glob: "pyproject.toml"
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v6
+          cache-dependency-glob: "uv.lock"
+      - name: Set up Python 3.14
+        run: uv python install 3.14
+      - name: Install documentation dependencies
+        run: uv sync --only-group docs --python 3.14
+      - name: Build docs with Zensical
+        run: uv run --only-group docs zensical build --clean --strict
+      - name: Upload GitHub Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
-          python-version: ${{ matrix.python-version }}
+          path: site
 
-      - name: Install the project
-        run: uv sync
-
-      - name: Build docs
-        run: uv run mkdocs build
-
-      # Only deploy on ubuntu-latest with Python 3.13 when pushing to master
-      - name: Deploy docs
-        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.13' && github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: uv run mkdocs gh-deploy --force
-
-      - name: Minimize uv cache
-        run: uv cache prune --ci
+  deploy:
+    name: Deploy docs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.0

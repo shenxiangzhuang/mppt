@@ -27,19 +27,19 @@ def add(a, b):
     === "Run doctest for a specific module"
 
         ```bash
-        python -m doctest -v mppt/hello.py
+        uv run python -m doctest -v src/mppt/hello.py
         ```
 
     === "Run doctest for all the modules"
 
         ```bash
-        python -m doctest -v mppt/*.py
+        uv run python -m doctest -v src/mppt/*.py
         ```
 
     === "Run with pytest"
 
         ```bash
-        pytest --doctest-modules
+        uv run pytest --doctest-modules src/mppt tests
         ```
 
 ## Hypothesis
