@@ -34,7 +34,7 @@ jobs:
         run: uv run pytest --doctest-modules -v --cov=mppt --cov-fail-under 90 --cov-report=term --cov-report=xml --cov-report=html src/mppt tests
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v7.0.0
+        uses: codecov/codecov-action@v7.1.1
         if: success() && matrix.os == 'ubuntu-latest' && matrix.python-version == '3.14'
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
